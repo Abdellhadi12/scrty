@@ -5,7 +5,7 @@ const prefix = "$"
 var adminprefix = '#' 
 
 
-//////��� ��� ������� 
+//////ßæÏ ØÑÏ ÇáÈæÊÇÊ 
 let antihack = JSON.parse(fs.readFileSync('./antihack.json' , 'utf8'));//require antihack.json file
 client.on('message', message => {
     if(message.content.startsWith(prefix + "toggleAntihack")) {
@@ -14,8 +14,8 @@ client.on('message', message => {
         if(!antihack[message.guild.id]) antihack[message.guild.id] = {
           onoff: 'Off'
         }
-          if(antihack[message.guild.id].onoff === 'Off') return [message.channel.send(`**✅ The AntiHack Is __𝐎𝐍__ !**`), antihack[message.guild.id].onoff = 'On']
-          if(antihack[message.guild.id].onoff === 'On') return [message.channel.send(`**⛔ The AntiHack Is __𝐎𝐅𝐅__ !**`), antihack[message.guild.id].onoff = 'Off']
+          if(antihack[message.guild.id].onoff === 'Off') return [message.channel.send(`**âœ… The AntiHack Is __ðŽð__ !**`), antihack[message.guild.id].onoff = 'On']
+          if(antihack[message.guild.id].onoff === 'On') return [message.channel.send(`**â›” The AntiHack Is __ðŽð…ð…__ !**`), antihack[message.guild.id].onoff = 'Off']
           fs.writeFile("./antihack.json", JSON.stringify(antihack), (err) => {
             if (err) console.error(err)
             .catch(err => {
@@ -156,7 +156,7 @@ client.on('message', message => {
 antibots[message.guild.id] = {
 onoff: 'On',
 }
-message.channel.send(`**✅ The AntiBots Is __𝐎𝐍__ !**`)
+message.channel.send(`**âœ… The AntiBots Is __ðŽð__ !**`)
           fs.writeFile("./antibots.json", JSON.stringify(antibots), (err) => {
             if (err) console.error(err)
             .catch(err => {
@@ -172,7 +172,7 @@ message.channel.send(`**✅ The AntiBots Is __𝐎𝐍__ !**`)
 antibots[message.guild.id] = {
 onoff: 'Off',
 }
-message.channel.send(`**⛔ The AntiBots Is __𝐎𝐅𝐅__ !**`)
+message.channel.send(`**â›” The AntiBots Is __ðŽð…ð…__ !**`)
           fs.writeFile("./antibots.json", JSON.stringify(antibots), (err) => {
             if (err) console.error(err)
             .catch(err => {
@@ -198,7 +198,7 @@ console.error(err);
 });
 })
 
-//////��� ��� �������
+//////ßæÏ ãäÚ ÇáÊÎÑíÈ
 
 var config = {
   events: [
@@ -338,4 +338,4 @@ if (message.content.startsWith(adminprefix + 'setava')) {
 
 
 
-client10.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
