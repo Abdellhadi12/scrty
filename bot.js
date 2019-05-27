@@ -14,8 +14,8 @@ client.on('message', message => {
         if(!antihack[message.guild.id]) antihack[message.guild.id] = {
           onoff: 'Off'
         }
-          if(antihack[message.guild.id].onoff === 'Off') return [message.channel.send(`**âœ… The AntiHack Is ON!**`), antihack[message.guild.id].onoff = 'On']
-          if(antihack[message.guild.id].onoff === 'On') return [message.channel.send(`**â›” The AntiHack Is OFF!**`), antihack[message.guild.id].onoff = 'Off']
+          if(antihack[message.guild.id].onoff === 'Off') return [message.channel.send(`** The AntiHack Is ON!**`), antihack[message.guild.id].onoff = 'On']
+          if(antihack[message.guild.id].onoff === 'On') return [message.channel.send(`**The AntiHack Is OFF!**`), antihack[message.guild.id].onoff = 'Off']
           fs.writeFile("./antihack.json", JSON.stringify(antihack), (err) => {
             if (err) console.error(err)
             .catch(err => {
@@ -156,7 +156,7 @@ client.on('message', message => {
 antibots[message.guild.id] = {
 onoff: 'On',
 }
-message.channel.send(`**âœ… The AntiBots Is ON!**`)
+message.channel.send(`**âœ… The AntiBots Is ON ✅!**`)
           fs.writeFile("./antibots.json", JSON.stringify(antibots), (err) => {
             if (err) console.error(err)
             .catch(err => {
@@ -172,7 +172,7 @@ message.channel.send(`**âœ… The AntiBots Is ON!**`)
 antibots[message.guild.id] = {
 onoff: 'Off',
 }
-message.channel.send(`**â›” The AntiBots Is OFF !**`)
+message.channel.send(`**â›” The AntiBots Is OFF ❌**`)
           fs.writeFile("./antibots.json", JSON.stringify(antibots), (err) => {
             if (err) console.error(err)
             .catch(err => {
@@ -253,7 +253,7 @@ client.on("raw", (packet)=> {
 client.on("reachLimit", (limit)=> {
     let log = limit.guild.channels.find( channel => channel.name === "log");
     log.send(`<@${limit.user.id}>`+"\حاول التخريب في السيرفر (!)");
-    limit.guild.owner.send(limit.user.username+"\ntried to hack (!)")
+    limit.guild.owner.send(limit.user.username+"\حاول التخريب في السيرفر #log ")
     limit.member.roles.map(role => {
       limit.member.removeRole(role.id)
       .catch(log.send)
