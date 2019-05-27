@@ -260,16 +260,6 @@ client.on("reachLimit", (limit)=> {
     });
   });
 
-client.on('ready', () => {
-   console.log(`----------------`);
-      
-        console.log(`----------------`);
-      console.log(`ON ${client.guilds.size} Servers '     Script By : •AあどうU 💔•#6666 ' `);
-    console.log(`----------------`);
-  console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`#Dev by osama,tech.#0184`,"http://twitch.tv/S-F")
-client.user.setStatus("dnd")
-});
 
 
 
