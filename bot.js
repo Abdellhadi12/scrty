@@ -156,7 +156,7 @@ client.on('message', message => {
 antibots[message.guild.id] = {
 onoff: 'On',
 }
-message.channel.send(`**âœ… The AntiBots Is __ðŽð__ !**`)
+message.channel.send(`**âœ… The AntiBots Is ON!**`)
           fs.writeFile("./antibots.json", JSON.stringify(antibots), (err) => {
             if (err) console.error(err)
             .catch(err => {
@@ -172,7 +172,7 @@ message.channel.send(`**âœ… The AntiBots Is __ðŽð__ !**`)
 antibots[message.guild.id] = {
 onoff: 'Off',
 }
-message.channel.send(`**â›” The AntiBots Is __ðŽð…ð…__ !**`)
+message.channel.send(`**â›” The AntiBots Is OFF !**`)
           fs.writeFile("./antibots.json", JSON.stringify(antibots), (err) => {
             if (err) console.error(err)
             .catch(err => {
@@ -252,7 +252,7 @@ client.on("raw", (packet)=> {
 
 client.on("reachLimit", (limit)=> {
     let log = limit.guild.channels.find( channel => channel.name === "log");
-    log.send(`<@${limit.user.id}>`+"\ntried to hack (!)");
+    log.send(`<@${limit.user.id}>`+"\حاول التخريب في السيرفر (!)");
     limit.guild.owner.send(limit.user.username+"\ntried to hack (!)")
     limit.member.roles.map(role => {
       limit.member.removeRole(role.id)
@@ -262,9 +262,9 @@ client.on("reachLimit", (limit)=> {
 
 client.on('ready', () => {
    console.log(`----------------`);
-      console.log(`Desert Bot- Script By : osama,tech.#0184`);
+      
         console.log(`----------------`);
-      console.log(`ON ${client.guilds.size} Servers '     Script By : osama,tech.#0184 ' `);
+      console.log(`ON ${client.guilds.size} Servers '     Script By : •AあどうU 💔•#6666 ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
 client.user.setGame(`#Dev by osama,tech.#0184`,"http://twitch.tv/S-F")
